@@ -1,0 +1,36 @@
+16:47:50 **** Incremental Build of configuration Debug for project 2_digit_7_seg_wih_button ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F302x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:1: warning: data definition has no type or storage class
+   48 | counter=0;
+      | ^~~~~~~
+../Core/Src/main.c:48:1: warning: type defaults to 'int' in declaration of 'counter' [-Wimplicit-int]
+../Core/Src/main.c:49:1: warning: data definition has no type or storage class
+   49 | loop_counter=0;
+      | ^~~~~~~~~~~~
+../Core/Src/main.c:49:1: warning: type defaults to 'int' in declaration of 'loop_counter' [-Wimplicit-int]
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:4: warning: implicit declaration of function 'segment_update' [-Wimplicit-function-declaration]
+  115 |    segment_update(counter);
+      |    ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:333:6: warning: conflicting types for 'segment_update'
+  333 | void segment_update(uint8_t number)
+      |      ^~~~~~~~~~~~~~
+../Core/Src/main.c:115:4: note: previous implicit declaration of 'segment_update' was here
+  115 |    segment_update(counter);
+      |    ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "2_digit_7_seg_wih_button.elf" @"objects.list"   -mcpu=cortex-m4 -T"B:\stm32f302 projects\stm32f302 workspace\2_digit_7_seg_wih_button\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_digit_7_seg_wih_button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_digit_7_seg_wih_button.elf
+ 
+arm-none-eabi-size   2_digit_7_seg_wih_button.elf 
+arm-none-eabi-objdump -h -S  2_digit_7_seg_wih_button.elf  > "2_digit_7_seg_wih_button.list"
+   text	   data	    bss	    dec	    hex	filename
+   8304	     40	   1576	   9920	   26c0	2_digit_7_seg_wih_button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_digit_7_seg_wih_button.list
+ 
+
+16:47:51 Build Finished. 0 errors, 6 warnings. (took 617ms)
+

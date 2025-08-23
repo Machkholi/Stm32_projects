@@ -1,0 +1,10 @@
+20:15:21 **** Incremental Build of configuration Debug for project dwin_display_polling ****
+make -j4 all 
+arm-none-eabi-size  dwin_display_polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15628	     24	   2280	  17932	   460c	dwin_display_polling.elf
+Finished building: default.size.stdout
+ 
+
+20:15:22 Build Finished. 0 errors, 0 warnings. (took 704ms)
+

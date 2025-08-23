@@ -1,0 +1,10 @@
+19:58:21 **** Build of configuration Debug for project gpio_exti_button_freertos ****
+make -j4 all 
+arm-none-eabi-size  gpio_exti_button_freertos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15440	     96	   6056	  21592	   5458	gpio_exti_button_freertos.elf
+Finished building: default.size.stdout
+ 
+
+19:58:22 Build Finished. 0 errors, 0 warnings. (took 1s.462ms)
+

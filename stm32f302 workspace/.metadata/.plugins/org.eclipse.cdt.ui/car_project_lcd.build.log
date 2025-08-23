@@ -1,0 +1,10 @@
+15:24:34 **** Incremental Build of configuration Debug for project car_project_lcd ****
+make -j4 all 
+arm-none-eabi-size   car_project_lcd.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11868	    120	   1608	  13596	   351c	car_project_lcd.elf
+Finished building: default.size.stdout
+ 
+
+15:24:35 Build Finished. 0 errors, 0 warnings. (took 221ms)
+

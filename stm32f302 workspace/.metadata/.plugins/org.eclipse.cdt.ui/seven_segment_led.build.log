@@ -1,0 +1,10 @@
+06:38:20 **** Incremental Build of configuration Debug for project seven_segment_led ****
+make -j4 all 
+arm-none-eabi-size   seven_segment_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8672	     20	   1580	  10272	   2820	seven_segment_led.elf
+Finished building: default.size.stdout
+ 
+
+06:38:20 Build Finished. 0 errors, 0 warnings. (took 220ms)
+

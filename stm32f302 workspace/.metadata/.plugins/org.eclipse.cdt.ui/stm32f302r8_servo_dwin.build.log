@@ -1,0 +1,10 @@
+16:23:29 **** Build of configuration Debug for project stm32f302r8_servo_dwin ****
+make -j4 all 
+arm-none-eabi-size  stm32f302r8_servo_dwin.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22512	    432	   1816	  24760	   60b8	stm32f302r8_servo_dwin.elf
+Finished building: default.size.stdout
+ 
+
+16:23:30 Build Finished. 0 errors, 0 warnings. (took 1s.22ms)
+

@@ -1,0 +1,10 @@
+18:40:12 **** Incremental Build of configuration Debug for project Rfid_module ****
+make -j4 all 
+arm-none-eabi-size  Rfid_module.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11548	     12	   1700	  13260	   33cc	Rfid_module.elf
+Finished building: default.size.stdout
+ 
+
+18:40:13 Build Finished. 0 errors, 0 warnings. (took 312ms)
+

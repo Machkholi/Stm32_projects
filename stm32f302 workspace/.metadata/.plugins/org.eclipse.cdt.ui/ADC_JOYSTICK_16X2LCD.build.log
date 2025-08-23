@@ -1,0 +1,10 @@
+20:36:39 **** Incremental Build of configuration Debug for project ADC_JOYSTICK_16X2LCD ****
+make -j4 all 
+arm-none-eabi-size   ADC_JOYSTICK_16X2LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14376	     20	   1732	  16128	   3f00	ADC_JOYSTICK_16X2LCD.elf
+Finished building: default.size.stdout
+ 
+
+20:36:39 Build Finished. 0 errors, 0 warnings. (took 253ms)
+

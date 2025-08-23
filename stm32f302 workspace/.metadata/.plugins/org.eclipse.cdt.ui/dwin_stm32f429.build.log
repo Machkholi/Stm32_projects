@@ -1,0 +1,10 @@
+20:15:22 **** Build of configuration Debug for project dwin_stm32f429 ****
+make -j4 all 
+arm-none-eabi-size  dwin_stm32f429.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11376	    136	   1656	  13168	   3370	dwin_stm32f429.elf
+Finished building: default.size.stdout
+ 
+
+20:15:23 Build Finished. 0 errors, 0 warnings. (took 884ms)
+

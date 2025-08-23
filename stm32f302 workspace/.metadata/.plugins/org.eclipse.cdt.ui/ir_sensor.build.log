@@ -1,0 +1,17 @@
+13:09:55 **** Incremental Build of configuration Debug for project ir_sensor ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F302x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ir_sensor.elf" @"objects.list"   -mcpu=cortex-m4 -T"B:\stm32f302 projects\stm32f302 workspace\ir_sensor\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ir_sensor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ir_sensor.elf
+ 
+arm-none-eabi-size  ir_sensor.elf 
+arm-none-eabi-objdump -h -S ir_sensor.elf  > "ir_sensor.list"
+   text	   data	    bss	    dec	    hex	filename
+  12736	     12	   1660	  14408	   3848	ir_sensor.elf
+Finished building: default.size.stdout
+ 
+Finished building: ir_sensor.list
+ 
+
+13:09:56 Build Finished. 0 errors, 0 warnings. (took 977ms)
+

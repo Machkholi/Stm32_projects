@@ -1,0 +1,17 @@
+21:23:39 **** Incremental Build of configuration Debug for project DWIN_DISPLAY ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/display.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F302x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/display.d" -MT"Core/Src/display.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/display.o"
+arm-none-eabi-g++ -o "DWIN_DISPLAY.elf" @"objects.list"   -mcpu=cortex-m4 -T"B:\stm32f302 projects\stm32f302 workspace\DWIN_DISPLAY\STM32F302R8TX_FLASH.ld" -Wl,-Map="DWIN_DISPLAY.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DWIN_DISPLAY.elf
+ 
+arm-none-eabi-size  DWIN_DISPLAY.elf 
+arm-none-eabi-objdump -h -S DWIN_DISPLAY.elf  > "DWIN_DISPLAY.list"
+   text	   data	    bss	    dec	    hex	filename
+  21392	    168	   2104	  23664	   5c70	DWIN_DISPLAY.elf
+Finished building: default.size.stdout
+ 
+Finished building: DWIN_DISPLAY.list
+ 
+
+21:23:40 Build Finished. 0 errors, 0 warnings. (took 1s.22ms)
+

@@ -1,0 +1,10 @@
+15:31:26 **** Incremental Build of configuration Debug for project 7_SEG_LED_WITH_BUTTON ****
+make -j4 all 
+arm-none-eabi-size   7_SEG_LED_WITH_BUTTON.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8124	     40	   1568	   9732	   2604	7_SEG_LED_WITH_BUTTON.elf
+Finished building: default.size.stdout
+ 
+
+15:31:26 Build Finished. 0 errors, 0 warnings. (took 239ms)
+
