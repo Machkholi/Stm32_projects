@@ -23,6 +23,8 @@
 /* USER CODE BEGIN Includes */
 #include <stdint.h>
 #include<string.h>
+#include<stdlib.h>
+#include<stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -230,6 +232,9 @@ void DWIN_ParseFrame(uint8_t *data, uint16_t len)
 
                 vp_address   = vp;
                 received_value = value;
+
+                printf("vp address = %d\n",vp_address);
+                printf("received value = %d\n",received_value);
                 vp_updated = 1;
             }
             i += frame_len - 1;  // jump to next frame
@@ -318,6 +323,8 @@ int main(void)
   dwin_page_change(0);
   HAL_Delay(1000);
   dwin_page_change(9);
+
+  printf("vp address");
 
   /* USER CODE END 2 */
 
@@ -436,7 +443,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 38400;
+  huart2.Init.BaudRate = 115200;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;

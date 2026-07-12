@@ -60,8 +60,8 @@ all: main-build
 main-build: DWIN_UART_DMA_TEMPLATE.elf secondary-outputs
 
 # Tool invocations
-DWIN_UART_DMA_TEMPLATE.elf DWIN_UART_DMA_TEMPLATE.map: $(OBJS) $(USER_OBJS) A:\GitHub\Stm32_projects\stm32f302\ workspace\DWIN_UART_DMA_TEMPLATE\STM32F302R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "DWIN_UART_DMA_TEMPLATE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"A:\GitHub\Stm32_projects\stm32f302 workspace\DWIN_UART_DMA_TEMPLATE\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DWIN_UART_DMA_TEMPLATE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+DWIN_UART_DMA_TEMPLATE.elf DWIN_UART_DMA_TEMPLATE.map: $(OBJS) $(USER_OBJS) A:\GitHub\Stm32_projects\stm32f302\ workspace\DWIN_UART_DMA_TEMPLATE(fully\ working)\STM32F302R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "DWIN_UART_DMA_TEMPLATE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"A:\GitHub\Stm32_projects\stm32f302 workspace\DWIN_UART_DMA_TEMPLATE(fully working)\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DWIN_UART_DMA_TEMPLATE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
