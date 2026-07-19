@@ -1,0 +1,16 @@
+../Core/Src/dwin_display.c:37:16:tx_next	1
+../Core/Src/dwin_display.c:41:16:tx_empty	1
+../Core/Src/dwin_display.c:45:16:tx_full	1
+../Core/Src/dwin_display.c:49:13:tx_start_from_tail	3
+../Core/Src/dwin_display.c:60:13:DWIN_Send_Blocking	4
+../Core/Src/dwin_display.c:65:13:DWIN_Send_NonBlocking	8
+../Core/Src/dwin_display.c:91:13:DWIN_Send	1
+../Core/Src/dwin_display.c:99:13:DWIN_ParseFrame	7
+../Core/Src/dwin_display.c:122:6:DWIN_Init	1
+../Core/Src/dwin_display.c:137:6:DWIN_Process	5
+../Core/Src/dwin_display.c:156:6:DWIN_WriteVP	1
+../Core/Src/dwin_display.c:169:6:DWIN_PageChange	1
+../Core/Src/dwin_display.c:184:6:DWIN_OnRxEvent	3
+../Core/Src/dwin_display.c:197:6:DWIN_OnTxCplt	5
+../Core/Src/dwin_display.c:215:6:DWIN_OnError	5
+../Core/Src/dwin_display.c:233:9:DWIN_TryGetLastUpdate	4

@@ -1,0 +1,16 @@
+../Core/Src/dwin_display.c:37:16:tx_next	16	static
+../Core/Src/dwin_display.c:41:16:tx_empty	4	static
+../Core/Src/dwin_display.c:45:16:tx_full	8	static
+../Core/Src/dwin_display.c:49:13:tx_start_from_tail	8	static
+../Core/Src/dwin_display.c:60:13:DWIN_Send_Blocking	16	static
+../Core/Src/dwin_display.c:65:13:DWIN_Send_NonBlocking	24	static,ignoring_inline_asm
+../Core/Src/dwin_display.c:91:13:DWIN_Send	16	static
+../Core/Src/dwin_display.c:99:13:DWIN_ParseFrame	32	static
+../Core/Src/dwin_display.c:122:6:DWIN_Init	16	static,ignoring_inline_asm
+../Core/Src/dwin_display.c:137:6:DWIN_Process	16	static,ignoring_inline_asm
+../Core/Src/dwin_display.c:156:6:DWIN_WriteVP	16	static
+../Core/Src/dwin_display.c:169:6:DWIN_PageChange	16	static
+../Core/Src/dwin_display.c:184:6:DWIN_OnRxEvent	24	static
+../Core/Src/dwin_display.c:197:6:DWIN_OnTxCplt	16	static,ignoring_inline_asm
+../Core/Src/dwin_display.c:215:6:DWIN_OnError	16	static,ignoring_inline_asm
+../Core/Src/dwin_display.c:233:9:DWIN_TryGetLastUpdate	16	static,ignoring_inline_asm
