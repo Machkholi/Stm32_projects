@@ -70,7 +70,7 @@ uint8_t rx_byte;
  uint8_t rx_buffer[32];
 
  uint8_t rx_index = 0;
-
+ uint8_t tx_buf[32];
 
  void DWIN_Send(uint8_t *data, uint16_t length)
  {
@@ -108,6 +108,19 @@ uint8_t rx_byte;
                sizeof(tx_buffer));
  }
 
+ void DWIN_WriteVP(uint16_t vp, uint16_t value) {
+     tx_buf[0] = 0x5A;
+     tx_buf[1] = 0xA5;
+     tx_buf[2] = 0x05;
+     tx_buf[3] = 0x82;
+     tx_buf[4] = (uint8_t)(vp >> 8);
+     tx_buf[5] = (uint8_t)(vp & 0xFF);
+     tx_buf[6] = (uint8_t)(value >> 8);
+     tx_buf[7] = (uint8_t)(value & 0xFF);
+
+     DWIN_Send(tx_buf, 8);
+ }
+
  void DWIN_ProcessVP(uint16_t vp, uint16_t value)
  {
      switch (vp)
@@ -118,16 +131,24 @@ uint8_t rx_byte;
           * Key 0001 -> Page 1
           * Key 0002 -> Page 2
           * -------------------------------------------------------------- */
+     	 case 0x0000:
+
+             if (value == 0x1006)
+             {
+                 DWIN_SetPage(64);
+             }
+             break;
 
          case 0x1000:
 
              if (value == 0x0001)
              {
-                 DWIN_SetPage(1);
+                 DWIN_SetPage(64);
              }
              else if (value == 0x0002)
              {
-                 DWIN_SetPage(2);
+                 DWIN_SetPage(68);
+                 DWIN_WriteVP(0x3000,15);
              }
 
              break;
@@ -166,6 +187,12 @@ uint8_t rx_byte;
           * -------------------------------------------------------------- */
 
          case 0x1006:
+
+
+
+             break;
+
+         case 0x3000:
 
 
 
@@ -387,7 +414,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   DWIN_SetPage(0);
   HAL_Delay(1000);
-  DWIN_SetPage(1);
+  DWIN_SetPage(63);
   /* USER CODE END 2 */
 
   /* Infinite loop */
